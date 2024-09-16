@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Sushi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sushi">Sushi</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="slider">
+        <div class="slider1">
+            <input type="radio" name="radio-btn" id="radio1" checked>
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+    
+            <div class="slides"> 
+                <div class="slide">
+                    <img src="sushi20wide.jpg" alt="Sushi 1">
+                </div>
+                <div class="slide">
+                    <img src="sushi21wide.jpg" alt="Sushi 2">
+                </div>
+                <div class="slide">
+                    <img src="sushi22wide.jpg" alt="Sushi 3">
+                </div>
+            </div>
+    
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+        </div>
+    </section>
+    
+    </section>
+    <section class="welcome">
+        <h1>Bem-vindo ao Go Sushi!</h1>
+        <p>Desfrute dos melhores sushis da cidade com ingredientes frescos e receitas autênticas.</p>
+    </section>
+
+    <section id="sushi" class="menu">
+        <h2>Nosso Cardápio</h2>
+        <div class="menu-options">
+            <div class="menu-item">
+                <button class="menu-button" data-content="sushi1">
+                    <img src="nigirisushi.jpg" alt="Sushi Nigiri" class="menu-icon">
+                </button>
+                <div class="menu-description" id="sushi1">
+                    <p><strong>Ingredientes:</strong> Arroz de sushi, peixe fresco, wasabi, molho de soja.</p>
+                    <p><strong>Descrição:</strong> Nigiri é uma peça de arroz moldada à mão com uma fatia de peixe fresco em cima. Simples e delicioso.</p>
+                    <p><strong>Preço:</strong> R$ 29,90</p>
+                </div>
+                <p class="menu-brief">Nigiri: Arroz moldado com peixe fresco. <span class="price">R$ 29,90</span></p>
+            </div>
+            <div class="menu-item">
+                <button class="menu-button" data-content="sushi2">
+                    <img src="makisushi.jfif" alt="Sushi Maki" class="menu-icon">
+                </button>
+                <div class="menu-description" id="sushi2">
+                    <p><strong>Ingredientes:</strong> Arroz de sushi, alga nori, peixe, vegetais.</p>
+                    <p><strong>Descrição:</strong> Maki é um sushi enrolado com alga nori, recheado com peixe e vegetais, cortado em pequenas rodelas.</p>
+                    <p><strong>Preço:</strong> R$ 24,90</p>
+                </div>
+                <p class="menu-brief">Maki: Sushi enrolado com peixe e vegetais. <span class="price">R$ 24,90</span></p>
+            </div>
+            <div class="menu-item">
+                <button class="menu-button" data-content="sushi3">
+                    <img src="temakisushi.jpg" alt="Sushi Temaki" class="menu-icon">
+                </button>
+                <div class="menu-description" id="sushi3">
+                    <p><strong>Ingredientes:</strong> Arroz de sushi, alga nori, peixe, vegetais, molho de soja.</p>
+                    <p><strong>Descrição:</strong> Temaki é um cone de alga nori recheado com arroz de sushi, peixe e vegetais.</p>
+                    <p><strong>Preço:</strong> R$ 32,90</p>
+                </div>
+                <p class="menu-brief">Temaki: Cone de alga com arroz, peixe e vegetais. <span class="price">R$ 32,90</span></p>
+            </div>
+            <div class="menu-item">
+                <button class="menu-button" data-content="sushi4">
+                    <img src="hossomaki.jpg" alt="Sushi Hossomaki" class="menu-icon">
+                </button>
+                <div class="menu-description" id="sushi4">
+                    <p><strong>Ingredientes:</strong> Arroz de sushi, alga nori, peixe ou vegetais.</p>
+                    <p><strong>Descrição:</strong> Hossomaki é um sushi enrolado em alga nori com um recheio de arroz e salmão.</p>
+                    <p><strong>Preço:</strong> R$ 19,90</p>
+                </div>
+                <p class="menu-brief">Hossomaki: Sushi enrolado com poucos ingredientes. <span class="price">R$ 19,90</span></p>
+            </div>
+            <div class="menu-item">
+                <button class="menu-button" data-content="sushi5">
+                    <img src="yakissoba.jpg" alt="Yakissoba" class="menu-icon">
+                </button>
+                <div class="menu-description" id="sushi5">
+                    <p><strong>Ingredientes:</strong> Macarrão, vegetais variados, carne (ou tofu), molho de soja.</p>
+                    <p><strong>Descrição:</strong> Yakissoba é um prato japonês de macarrão frito com vegetais e carne, servido com um molho saboroso.</p>
+                    <p><strong>Preço:</strong> R$ 34,90</p>
+                </div>
+                <p class="menu-brief">Yakissoba: Macarrão frito com vegetais e carne. <span class="price">R$ 34,90</span></p>
+            </div>
+            <div class="menu-item">
+                <button class="menu-button" data-content="sushi6">
+                    <img src="hot.jpg" alt="Hot Sushi" class="menu-icon">
+                </button>
+                <div class="menu-description" id="sushi6">
+                    <p><strong>Ingredientes:</strong> Arroz de sushi, peixe, molho especial, tempura.</p>
+                    <p><strong>Descrição:</strong> Hot Sushi é um sushi quente, geralmente preparado com um molho especial e uma cobertura crocante de tempura.</p>
+                    <p><strong>Preço:</strong> R$ 39,90</p>
+                </div>
+                <p class="menu-brief">Hot Sushi: Sushi quente com molho especial. <span class="price">R$ 39,90</span></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="map">
+        <h2>Encontre-nos Aqui</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3509.4203687590084!2d-54.96793428927273!3d-28.40656997568785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDI0JzIzLjciUyA1NMKwNTcnNTUuMyJX!5e0!3m2!1spt-BR!2sbr!4v1726188507148!5m2!1spt-BR!2sbr"
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Entre em Contato</h2>
+        <p>Para mais informações ou pedidos, entre em contato conosco via WhatsApp:</p>
+        <a href="https://wa.me/5511999999999" class="contact-button" target="_blank">Contato via WhatsApp</a>
+        <p>Ou envie-nos uma mensagem por e-mail:</p>
+        <form id="contact-form">
+            <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+            <textarea id="message" name="message" rows="4" placeholder="Sua mensagem" required></textarea>
+            <button type="submit">Enviar Mensagem</button>
+            <p id="form-response"></p>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Go Sushi. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
