@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Menu de Navegação -->
+    
     <header>
         <nav>
             <ul>
@@ -18,28 +18,38 @@
         </nav>
     </header>
 
-    <!-- Imagens de Sushi em Slides -->
     <section id="home" class="slider">
-        <div class="slides">
-            <div class="slide fade">
-                <img src="sushi20.jpg" alt="Sushi 1">
+        <div class="slider1">
+            <input type="radio" name="radio-btn" id="radio1" checked>
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+    
+            <div class="slides"> 
+                <div class="slide">
+                    <img src="sushi20wide.jpg" alt="Sushi 1">
+                </div>
+                <div class="slide">
+                    <img src="sushi21wide.jpg" alt="Sushi 2">
+                </div>
+                <div class="slide">
+                    <img src="sushi22wide.jpg" alt="Sushi 3">
+                </div>
             </div>
-            <div class="slide fade">
-                <img src="sushi21.jpg" alt="Sushi 2">
-            </div>
-            <div class="slide fade">
-                <img src="sushi22.png" alt="Sushi 3">
+    
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
             </div>
         </div>
     </section>
-
-    <!-- Mensagem de Boas-Vindas -->
+    
+    </section>
     <section class="welcome">
         <h1>Bem-vindo ao Go Sushi!</h1>
         <p>Desfrute dos melhores sushis da cidade com ingredientes frescos e receitas autênticas.</p>
     </section>
 
-    <!-- Opções do Cardápio -->
     <section id="sushi" class="menu">
         <h2>Nosso Cardápio</h2>
         <div class="menu-options">
@@ -111,6 +121,7 @@
             </div>
         </div>
     </section>
+
     <section class="map">
         <h2>Encontre-nos Aqui</h2>
         <div class="map-container">
@@ -124,11 +135,17 @@
         </div>
     </section>
 
-    <!-- Contato -->
     <section id="contact" class="contact">
         <h2>Entre em Contato</h2>
         <p>Para mais informações ou pedidos, entre em contato conosco via WhatsApp:</p>
         <a href="https://wa.me/5511999999999" class="contact-button" target="_blank">Contato via WhatsApp</a>
+        <p>Ou envie-nos uma mensagem por e-mail:</p>
+        <form id="contact-form">
+            <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+            <textarea id="message" name="message" rows="4" placeholder="Sua mensagem" required></textarea>
+            <button type="submit">Enviar Mensagem</button>
+            <p id="form-response"></p>
+        </form>
     </section>
 
     <footer>

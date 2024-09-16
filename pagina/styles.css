@@ -1,29 +1,37 @@
+/* Estilo básico para o corpo da página */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
     background-color: #f4f4f4;
-    overflow-x: hidden; /* Impede rolagem horizontal */
+    overflow-x: hidden; 
+    min-height: 100vh;
+    box-sizing: border-box;
 }
-/* Slider */
-.slider {
+
+.slider1 {
     position: relative;
-    max-width: 95%;
-    margin: auto;
+    margin: 0 auto;
+    width: 1000px;
+    height: 600px;
     overflow: hidden;
-    height: 300px;
 }
 
 .slides {
+    width: 100%;
+    height: 100%;
     display: flex;
-    transition: opacity 1.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
 .slide {
-    min-width: 100%;
-    box-sizing: border-box;
-    transition: opacity 1.5s ease-in-out;
+   flex:1 0 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   overflow: hidden;
 }
 
 .slide img {
@@ -31,31 +39,48 @@ body {
     height: auto;
     object-fit: cover;
     display: block;
+
 }
 
-/* Fade effect */
-.fade {
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out;
+.slider1 input {
+    display: none;
 }
 
-.fade.show {
-    opacity: 1;
+.manual-navigation {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    z-index: 10; /* Garante que os botões estejam visíveis sobre o slider */
 }
 
-@keyframes slideAnimation {
-    0% { opacity: 0; }
-    20% { opacity: 1; }
-    80% { opacity: 1; }
-    100% { opacity: 0; }
+.manual-btn {
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 5px;
+    background: #333;
 }
 
-.slide.fade {
-    animation: slideAnimation 10s infinite;
+.manual-btn:hover {
+    background: #ffff;
 }
 
-/* Cabeçalho */
+#radio1:checked ~ .slides{
+    transform: translateX(0%);
+}
 
+#radio2:checked ~ .slides{
+    transform: translateX(-100%);
+}
+
+#radio3:checked ~ .slides{
+    transform: translateX(-200%);
+}
+
+/* Estilos para o header */
 header {
     background-color: #c40e0e;
     color: white;
@@ -83,11 +108,13 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 }
+
+/* Estilos para seções */
 section {
-    padding: 20px; /* Adiciona espaçamento interno */
-    margin-bottom: 30px; /* Adiciona espaçamento abaixo de cada seção */
+    padding: 20px; 
+    margin-bottom: 30px; 
 }
-/* Mensagem de Boas-Vindas */
+
 .welcome {
     text-align: center;
     padding: 2rem 1rem;
@@ -104,7 +131,7 @@ section {
     color: #666;
 }
 
-/* Opções do Cardápio */
+/* Estilos para o menu */
 .menu {
     padding: 2rem 1rem;
 }
@@ -118,19 +145,19 @@ section {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; 
 }
 
 .menu-item {
-    flex: 1 1 calc(33% - 20px); /* Ajusta a largura dos itens, permitindo 3 itens por linha com espaçamento */
+    flex: 1 1 calc(33% - 20px); 
     display: flex;
-    flex-direction: column; /* Organiza o conteúdo verticalmente */
-    align-items: center; /* Alinha itens ao centro */
+    flex-direction: column; 
+    align-items: center; 
     border: 1px solid #ddd;
     padding: 10px;
     box-sizing: border-box;
     background-color: #f9f9f9;
-    position: relative; /* Para ajustar a posição do botão e descrição */
+    position: relative; 
 }
 
 .menu-button {
@@ -178,28 +205,60 @@ section {
     border-top: 1px solid #ddd;
     text-align: center;
 }
+
+/* Estilos para o mapa */
 .map {
     padding: 20px;
-    background-color: #f9f9f9; /* Cor de fundo clara para a seção do mapa */
-    text-align: center; /* Centraliza o conteúdo */
+    background-color: #f9f9f9; 
+    text-align: center; 
 }
 
 .map h2 {
     margin-bottom: 20px;
-    color: #333; /* Cor do texto do título */
+    color: #333; 
 }
 
 .map-container {
-    max-width: 100%; /* Garante que o mapa se ajuste ao tamanho da tela */
-    margin: 0 auto; /* Centraliza o mapa */
+    max-width: 100%; 
+    margin: 0 auto; 
 }
 
 .map iframe {
-    width: 100%; /* Faz com que o iframe use a largura total disponível */
-    height: 450px; /* Define a altura do mapa */
-    border: 0; /* Remove a borda do iframe */
+    width: 100%; 
+    height: 450px;
+    border: 0; 
 }
-/* Contato */
+
+/* Estilos para o contato */
+.contact {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #fff;
+}
+
+.contact h2 {
+    font-size: 2rem;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #25d366;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #128c7e;
+}
 .contact {
     text-align: center;
     padding: 2rem 1rem;
@@ -230,6 +289,42 @@ section {
     background-color: #128c7e;
 }
 
+#contact-form {
+    margin-top: 1rem;
+    text-align: left;
+    max-width: 500px;
+    margin: 1rem auto;
+}
+
+#contact-form input, #contact-form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#contact-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #0056b3;
+}
+
+#form-response {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: inherit;
+}
+
 footer {
     text-align: center;
     padding: 1rem;
@@ -237,16 +332,5 @@ footer {
     color: white;
     width: 100%;
     margin-top: 2rem;
-    clear: both; /* Garante que o rodapé não se sobreponha a outros elementos flutuantes */
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    box-sizing: border-box;
-}
-
-.container {
-    padding-bottom: 3rem; /* Adiciona espaço inferior para garantir que o rodapé não sobreponha o conteúdo */
+    clear: both; 
 }
